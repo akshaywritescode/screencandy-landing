@@ -1,4 +1,6 @@
 import Banner from "./components/banner";
+import FaqSection from "./sections/faq-section";
+import FooterSection from "./sections/footer";
 import Header from "./sections/header";
 import HeroSection from "./sections/hero-section";
 import TestimonialSection from "./sections/testimonial-section";
@@ -13,6 +15,8 @@ export default function Home() {
       <HeroSection />
       <TrustedBySection />
       <TestimonialSection />
+      <FaqSection />
+      <FooterSection />
     </div>
   );
 }
