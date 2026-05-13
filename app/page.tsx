@@ -1,4 +1,5 @@
 import Banner from "./components/banner";
+import AvailableSection from "./sections/available-section";
 import FaqSection from "./sections/faq-section";
 import FooterSection from "./sections/footer";
 import Header from "./sections/header";
@@ -14,6 +15,7 @@ export default function Home() {
       {/* Sections */}
       <HeroSection />
       <TrustedBySection />
+      <AvailableSection />
       <TestimonialSection />
       <FaqSection />
       <FooterSection />
