@@ -1,6 +1,7 @@
 import Banner from "./components/banner";
 import Header from "./sections/header";
 import HeroSection from "./sections/hero-section";
+import TrustedBySection from "./sections/trusted-by-section";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <Header />
       {/* Sections */}
       <HeroSection />
+      <TrustedBySection />
     </div>
   );
 }
