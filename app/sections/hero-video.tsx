@@ -4,7 +4,9 @@ export default function HeroVideo() {
       <video
         className="w-[90%] h-auto rounded-3xl"
         autoPlay
+        muted
         loop
+        playsInline
       >
         <source src="/assets/videos/sample.mp4" type="video/mp4" />
       </video>
