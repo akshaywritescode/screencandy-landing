@@ -4,11 +4,11 @@ type NavbarProps = {
 
 export default function Navbar({ mobile = false }: NavbarProps) {
   return (
-    <nav>
+    <nav className="relative z-50">
       <ul
         className={`flex ${
           mobile
-            ? "flex-col gap-5 text-center"
+            ? "flex-col items-center gap-7 text-2xl"
             : "items-center gap-7 text-sm"
         }`}
       >

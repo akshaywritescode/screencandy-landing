@@ -10,7 +10,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="relative p-5 rounded-2xl flex items-center justify-between">
+    <header className="relative z-50 p-5 rounded-2xl flex items-center justify-between">
       <Logo />
 
       {/* Desktop Nav */}
@@ -19,26 +19,43 @@ export default function Header() {
       </div>
 
       {/* Desktop Button */}
-      <button className="hidden md:block bg-blue-600 px-5 py-3 rounded-lg text-white hover:bg-blue-700 transition">
+      <button className="hidden md:block bg-violet-700 px-5 py-3 rounded-lg text-white hover:bg-violet-800 transition">
         Download
       </button>
 
       {/* Mobile Menu Button */}
-      <button
-        onClick={() => setOpen(!open)}
-        className="md:hidden p-2"
-      >
-        {open ? <X size={28} /> : <Menu size={28} />}
-      </button>
+      {!open && (
+        <button
+          onClick={() => setOpen(true)}
+          className="md:hidden p-2 relative z-50"
+        >
+          <Menu size={28} />
+        </button>
+      )}
 
       {/* Mobile Menu */}
       {open && (
-        <div className="absolute top-full left-0 mt-4 w-full rounded-2xl bg-white shadow-lg border p-6 md:hidden">
-          <Navbar mobile />
+        <div className="fixed inset-0 z-40 bg-white md:hidden">
+          {/* Top */}
+          <div className="flex items-center justify-between p-5">
+            <Logo />
 
-          <button className="w-full mt-5 bg-blue-600 px-5 py-3 rounded-lg text-white">
-            Download
-          </button>
+            <button onClick={() => setOpen(false)} className="p-2">
+              <X size={32} />
+            </button>
+          </div>
+
+          {/* Mobile Nav */}
+          <div className="mt-20 flex justify-center">
+            <Navbar mobile />
+          </div>
+
+          {/* CTA */}
+          <div className="absolute bottom-10 left-0 w-full px-6">
+            <button className="w-full bg-violet-700 px-5 py-4 rounded-2xl text-white text-lg font-medium">
+              Download
+            </button>
+          </div>
         </div>
       )}
     </header>
