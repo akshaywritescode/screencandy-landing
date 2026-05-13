@@ -1,6 +1,7 @@
 import Banner from "./components/banner";
 import Header from "./sections/header";
 import HeroSection from "./sections/hero-section";
+import TestimonialSection from "./sections/testimonial-section";
 import TrustedBySection from "./sections/trusted-by-section";
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       {/* Sections */}
       <HeroSection />
       <TrustedBySection />
+      <TestimonialSection />
     </div>
   );
 }
