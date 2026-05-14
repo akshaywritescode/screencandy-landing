@@ -35,15 +35,15 @@ export default function FeatureSection() {
             </div>
 
             {/* Video */}
-            <div className="relative aspect-video w-full">
+            <div className="relative w-full">
               <video
-                className="h-full w-full object-cover"
+                className="h-full w-full "
                 autoPlay
                 muted
                 loop
                 playsInline
               >
-                <source src="/demo.mp4" type="video/mp4" />
+                <source src="/assets/videos/demo.mp4" type="video/mp4" />
               </video>
 
               {/* Overlay */}
