@@ -1,6 +1,6 @@
 "use client";
 
-import TestimonialCard from "./testimonial-card";
+import TestimonialCard from "../components/testimonial-card";
 
 const testimonialData = [
   {

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Heart } from "lucide-react";
+import { Coffee, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const sponsors = {
@@ -150,7 +150,8 @@ export default function SponsorSection() {
           </p>
 
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-            <Button className="h-11 rounded-full px-6">
+            <Button className="bg-violet-700 h-11 rounded-full px-6">
+              <Heart />
               Sponsor on GitHub
             </Button>
 
@@ -158,6 +159,7 @@ export default function SponsorSection() {
               variant="outline"
               className="h-11 rounded-full px-6"
             >
+              <Coffee />
               Buy Me a Coffee
             </Button>
           </div>

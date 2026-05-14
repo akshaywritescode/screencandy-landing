@@ -61,7 +61,7 @@ export default function FooterSection() {
               </div>
 
               <div className="flex flex-col gap-3 sm:flex-row">
-                <Button asChild size="lg" className="h-11 rounded-full px-6">
+                <Button asChild size="lg" className="bg-violet-700 h-11 rounded-full px-6">
                   <Link href="#">
                     Download Now
                     <ArrowRight />
