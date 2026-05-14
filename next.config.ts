@@ -1,7 +1,3 @@
-// next.config.js
-
-import { hostname } from "os"
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {

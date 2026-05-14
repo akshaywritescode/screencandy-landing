@@ -41,7 +41,7 @@ export default function AvailableSection() {
   return (
     <section className="border-y-black/15 border-y border-dashed border flex min-h-[60vh] w-full flex-col items-center justify-center px-6 py-24 text-center">
       <div className="mx-auto max-w-4xl">
-        <div className="inline-flex items-center rounded-full border border-black/10 bg-black/[0.03] px-4 py-1.5 text-sm font-medium text-black/60">
+        <div className="inline-flex items-center rounded-full border border-black/10 bg-black/3 px-4 py-1.5 text-sm font-medium text-black/60">
           Cross Platform
         </div>
 
@@ -72,7 +72,7 @@ export default function AvailableSection() {
                   border transition-all duration-500
                   ${
                     isActive
-                      ? "border-black/15 bg-black/[0.04] shadow-sm"
+                      ? "border-black/15 bg-black/4 shadow-sm"
                       : "border-transparent bg-transparent opacity-45"
                   }
                 `}

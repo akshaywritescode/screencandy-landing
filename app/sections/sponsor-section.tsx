@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
 import { Coffee, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -70,7 +68,7 @@ function SponsorRow({
         {sponsors.map((sponsor) => (
           <div
             key={sponsor.name}
-            className="flex h-24 min-w-[180px] items-center justify-center rounded-[24px] border border-black/10 bg-background px-8 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md"
+            className="flex h-24 min-w-45 items-center justify-center rounded-[24px] border border-black/10 bg-background px-8 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md"
           >
             {/* Replace with actual logos */}
             <div className="text-lg font-semibold tracking-tight text-black/70">
@@ -103,7 +101,7 @@ export default function SponsorSection() {
       <div className="mx-auto max-w-7xl">
         {/* Header */}
         <div className="mx-auto max-w-3xl text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-black/[0.03] px-4 py-1.5 text-sm font-medium text-black/60">
+          <div className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-black/3 px-4 py-1.5 text-sm font-medium text-black/60">
             <Heart className="h-4 w-4" />
             Sponsors
           </div>
@@ -138,7 +136,7 @@ export default function SponsorSection() {
 
         {/* CTA */}
         {/* Bottom CTA */}
-        <div className="mt-20 rounded-[32px] border border-black/10 bg-black/[0.02] px-8 py-12 text-center">
+        <div className="mt-20 rounded-[32px] border border-black/10 bg-black/2 px-8 py-12 text-center">
           <h3 className="text-3xl font-semibold tracking-tight">
             No subscriptions. No locked features.
           </h3>

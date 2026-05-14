@@ -127,16 +127,16 @@ export default function TestimonialSection() {
             <div
               key={columnIndex}
               className={`
-                relative h-[760px] w-[320px] overflow-hidden
+                relative h-190 w-[320px] overflow-hidden
                 ${columnIndex === 1 ? "hidden md:block" : ""}
                 ${columnIndex === 2 ? "hidden lg:block" : ""}
               `}
             >
               {/* Top Fade */}
-              <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-24 bg-gradient-to-b from-background to-transparent" />
+              <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-24 bg-linear-to-b from-background to-transparent" />
 
               {/* Bottom Fade */}
-              <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-24 bg-gradient-to-t from-background to-transparent" />
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-24 bg-linear-to-t from-background to-transparent" />
 
               <TestimonialTrack
                 column={column}

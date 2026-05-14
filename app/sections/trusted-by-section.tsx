@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const logos = [
   "/assets/logos/clerk-wordmark-light.svg",
   "/assets/logos/clickup-wordmark.svg",
@@ -17,11 +19,13 @@ export default function TrustedBySection() {
 
       <div className="flex flex-wrap items-center justify-center gap-14">
         {logos.map((logo) => (
-          <img
+          <Image
             key={logo}
             src={logo}
             alt="Company logo"
             className="h-8 w-auto"
+            height={10}
+            width={10}
           />
         ))}
       </div>
