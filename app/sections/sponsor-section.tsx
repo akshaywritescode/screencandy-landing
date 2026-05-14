@@ -98,7 +98,7 @@ export default function SponsorSection() {
   return (
     <section
       id="sponsors"
-      className="px-4 py-20 sm:px-6 lg:px-8 lg:py-28"
+      className="px-4 py-20 border-y-black/15 border-y border-dashed sm:px-6 lg:px-8 lg:py-28"
     >
       <div className="mx-auto max-w-7xl">
         {/* Header */}
