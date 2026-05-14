@@ -6,7 +6,7 @@ export default function FeatureSection() {
       <div className="mx-auto max-w-6xl">
         {/* Heading */}
         <div className="mx-auto max-w-3xl text-center">
-          <div className="inline-flex items-center rounded-full border border-black/10 bg-black/[0.03] px-4 py-1.5 text-sm font-medium text-black/60">
+          <div className="inline-flex items-center rounded-full border border-black/10 bg-black/3 px-4 py-1.5 text-sm font-medium text-black/60">
             Powerful Recording
           </div>
 
@@ -25,7 +25,7 @@ export default function FeatureSection() {
         <div className="mt-16">
           <div className="relative overflow-hidden rounded-[32px] border border-black/10 bg-black shadow-2xl shadow-black/10">
             {/* Glow */}
-            <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-white/5" />
+            <div className="absolute inset-0 bg-linear-to-br from-white/5 via-transparent to-white/5" />
 
             {/* Browser Top Bar */}
             <div className="flex items-center gap-2 border-b border-white/10 px-5 py-4">
