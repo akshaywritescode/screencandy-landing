@@ -2,7 +2,11 @@ import { Download } from "lucide-react";
 import HeroVideo from "./hero-video";
 import HeroTopBadge from "../components/hero-top-badge";
 
-export default function HeroSection() {
+type HeroSectionProps = {
+  onDownloadClick: () => void;
+};
+
+export default function HeroSection({ onDownloadClick }: HeroSectionProps) {
   return (
     <section className="relative z-0 w-full min-h-screen flex justify-center mt-20 md:mt-25 px-4 sm:px-6 overflow-hidden">
       <div className="flex flex-col gap-5 items-center max-w-5xl">
@@ -48,7 +52,11 @@ export default function HeroSection() {
 
         {/* Buttons */}
         <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row w-full sm:w-auto gap-3 sm:gap-4">
-          <button className="w-full sm:w-auto px-6 py-3 bg-violet-700 text-white rounded-xl font-medium hover:bg-violet-800 transition flex items-center justify-center gap-3">
+          <button
+            type="button"
+            onClick={onDownloadClick}
+            className="w-full sm:w-auto px-6 py-3 bg-violet-700 text-white rounded-xl font-medium hover:bg-violet-800 transition flex items-center justify-center gap-3"
+          >
             Download Now <Download className="w-5 h-5" />
           </button>
 

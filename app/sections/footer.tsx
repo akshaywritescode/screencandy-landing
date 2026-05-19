@@ -27,7 +27,7 @@ const footerGroups = [
   {
     title: "Resources",
     links: [
-      { label: "Download", href: "#" },
+      { label: "Download", href: "#", isDownload: true },
       { label: "Documentation", href: "#" },
       { label: "Changelog", href: "#" },
       { label: "Roadmap", href: "#" },
@@ -35,7 +35,11 @@ const footerGroups = [
   },
 ]
 
-export default function FooterSection() {
+type FooterSectionProps = {
+  onDownloadClick: () => void
+}
+
+export default function FooterSection({ onDownloadClick }: FooterSectionProps) {
   return (
     <footer className="px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
       <div className="mx-auto max-w-7xl">
@@ -61,11 +65,13 @@ export default function FooterSection() {
               </div>
 
               <div className="flex flex-col gap-3 sm:flex-row">
-                <Button asChild size="lg" className="bg-violet-700 h-11 rounded-full px-6">
-                  <Link href="#">
+                <Button
+                  size="lg"
+                  className="bg-violet-700 h-11 rounded-full px-6"
+                  onClick={onDownloadClick}
+                >
                     Download Now
                     <ArrowRight />
-                  </Link>
                 </Button>
 
                 <Button
@@ -123,12 +129,22 @@ export default function FooterSection() {
                   <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
                     {group.links.map((link) => (
                       <li key={link.label}>
-                        <Link
-                          href={link.href}
-                          className="transition-colors hover:text-foreground"
-                        >
-                          {link.label}
-                        </Link>
+                        {link.isDownload ? (
+                          <button
+                            type="button"
+                            onClick={onDownloadClick}
+                            className="transition-colors hover:text-foreground"
+                          >
+                            {link.label}
+                          </button>
+                        ) : (
+                          <Link
+                            href={link.href}
+                            className="transition-colors hover:text-foreground"
+                          >
+                            {link.label}
+                          </Link>
+                        )}
                       </li>
                     ))}
                   </ul>
@@ -151,12 +167,13 @@ export default function FooterSection() {
                 GitHub
               </Link>
 
-              <Link
-                href="#"
+              <button
+                type="button"
+                onClick={onDownloadClick}
                 className="transition-colors hover:text-foreground"
               >
                 Download
-              </Link>
+              </button>
             </div>
           </div>
         </div>

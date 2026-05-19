@@ -6,7 +6,11 @@ import { Menu, X } from "lucide-react";
 import Logo from "../components/logo";
 import Navbar from "../components/navbar";
 
-export default function Header() {
+type HeaderProps = {
+  onDownloadClick: () => void;
+};
+
+export default function Header({ onDownloadClick }: HeaderProps) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -19,7 +23,11 @@ export default function Header() {
       </div>
 
       {/* Desktop Button */}
-      <button className="hidden md:block bg-violet-700 px-5 py-3 rounded-lg text-white hover:bg-violet-800 transition">
+      <button
+        type="button"
+        onClick={onDownloadClick}
+        className="hidden md:block bg-violet-700 px-5 py-3 rounded-lg text-white hover:bg-violet-800 transition"
+      >
         Download
       </button>
 
@@ -40,7 +48,7 @@ export default function Header() {
           <div className="flex items-center justify-between p-5">
             <Logo />
 
-            <button onClick={() => setOpen(false)} className="p-2">
+            <button type="button" onClick={() => setOpen(false)} className="p-2">
               <X size={32} />
             </button>
           </div>
@@ -52,7 +60,14 @@ export default function Header() {
 
           {/* CTA */}
           <div className="absolute bottom-10 left-0 w-full px-6">
-            <button className="w-full bg-violet-700 px-5 py-4 rounded-2xl text-white text-lg font-medium">
+            <button
+              type="button"
+              onClick={() => {
+                setOpen(false);
+                onDownloadClick();
+              }}
+              className="w-full bg-violet-700 px-5 py-4 rounded-2xl text-white text-lg font-medium"
+            >
               Download
             </button>
           </div>
